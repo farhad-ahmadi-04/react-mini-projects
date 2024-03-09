@@ -34,10 +34,12 @@ body main #projects .project-item {
   padding: 8px;
   border-radius: 8px;
   overflow: hidden;
+  transition: all 0.2s;
 }
 body main #projects .project-item img {
   width: 206px;
   border-radius: 16px;
+  transition: all 0.5s;
 }
 body main #projects .project-item .title {
   width: 206px;
@@ -63,6 +65,9 @@ body main #projects .project-item .project-link {
   background-color: rgb(51, 79, 235);
   color: rgb(255, 255, 255);
   border-radius: 4px;
+}
+body main #projects .project-item:hover {
+  background-color: rgb(243, 250, 255);
 }
 
 /*# sourceMappingURL=index.css.map */
