@@ -18,5 +18,51 @@ body header p {
   font-size: 1.2rem;
   font-weight: 600;
 }
+body main #projects {
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 90vw;
+  background-color: rgb(251, 253, 255);
+  gap: 10px;
+}
+body main #projects .project-item {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+body main #projects .project-item img {
+  width: 206px;
+  border-radius: 16px;
+}
+body main #projects .project-item .title {
+  width: 206px;
+  margin: 10px 0 10px 0;
+  font-size: 1.2rem;
+}
+body main #projects .project-item .text {
+  width: 206px;
+  font-size: 0.95rem;
+  color: rgb(57, 57, 57);
+  margin-bottom: 5px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+body main #projects .project-item .project-link {
+  width: fit-content;
+  padding: 5px 25px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: rgb(51, 79, 235);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+}
 
 /*# sourceMappingURL=index.css.map */
