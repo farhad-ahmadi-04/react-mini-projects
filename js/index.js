@@ -1,3 +1,6 @@
+"use strict";
+import data from "../js/module/gettingData.js";
+
 /* <div class="project-item">
     <img src="./images/image04.jfif" alt="">
     <h5 class="title">mini Library</h5>
@@ -31,6 +34,7 @@ function prodactItem(image, title, text) {
 
     // create link
     const link = document.createElement('a')
+    link.href = '#'
     link.classList.add('project-link')
     link.textContent = 'visite'
     prodact.appendChild(link)
@@ -38,4 +42,5 @@ function prodactItem(image, title, text) {
     return prodact
 }
 
-projects.appendChild(prodactItem('./images/image04.jfif', 'mini Library', 'mini library'))
+
+data().then(data => data.forEach(element => projects.appendChild(prodactItem(element.image, element.title, element.text))))
