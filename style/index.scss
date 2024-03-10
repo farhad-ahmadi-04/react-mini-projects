@@ -5,11 +5,15 @@ body {
     box-sizing: border-box;
     font-family: "roboto";
     background-color: rgb(241, 241, 241);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     header {
         display: grid;
         grid-template-columns: 1fr 3fr;
         align-items: center;
+        width: 90vw;
         h3 {
             font-size: 1.9rem;
             font-weight: 800;
