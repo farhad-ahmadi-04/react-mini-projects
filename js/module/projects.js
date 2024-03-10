@@ -14,14 +14,14 @@ const projects = projectGenerator('div', { id: 'projects' })
  * @returns - element 
  * this function will create elemets with projectGenerator function
  */
-function prodactItem(image, title, text) {
+function prodactItem(image, title, text, pLink) {
 
     return projectGenerator(
         'div', { class: "project-item" },
         projectGenerator('img', { src: image }),
         projectGenerator('h5', { class: "title" }, title),
         projectGenerator('p', { class: 'text' }, text),
-        projectGenerator('a', { class: 'project-link', href: '#' }, 'visite')
+        projectGenerator('a', { class: 'project-link', href: pLink }, 'visite')
     )
 }
 
@@ -30,7 +30,7 @@ function prodactItem(image, title, text) {
  */
 document.addEventListener('DOMContentLoaded', () => {
     try {
-        data().then(data => data.forEach(element => projects.appendChild(prodactItem(element.image, element.title, element.text))))
+        data().then(data => data.forEach(element => projects.appendChild(prodactItem(element.image, element.title, element.text, element.link))))
     } catch (error) {
         console.log(error);
     }
