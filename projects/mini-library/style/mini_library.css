@@ -25,6 +25,7 @@ body main #bank-card {
   width: 90%;
   background-color: rgb(216, 250, 255);
   gap: 16px;
+  overflow-x: auto;
 }
 body main #bank-card .card {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
