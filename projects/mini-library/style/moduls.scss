@@ -1,0 +1,10 @@
+@mixin card-number {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+@mixin span-style {
+    font-size: 1.3rem;
+    line-height: 1;
+}

@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import "moduls.scss";
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto";
+    background-color: rgb(251, 253, 255);
+
+    header {
+        text-align: center;
+        padding: 8px 0 8px 0;
+        font-size: 1.75rem;
+        font-weight: bold;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        #bank-card {
+            display: flex;
+            align-items: center;
+            padding: 16px;
+            border-radius: 8px;
+            width: 90%;
+            background-color: rgb(216, 250, 255);
+            gap: 16px;
+
+            .card {
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+                border-radius: 16px;
+                display: flex;
+                flex-direction: column;
+                background: url(../images/4403214_18410.jpg);
+                background-size: cover;
+                padding: 16px;
+                gap: 16px;
+
+                .card-number {
+                    @include card-number;
+                    width: 270px;
+                    span {
+                        @include span-style;
+                    }
+                }
+
+                .card-name {
+                    @include card-number;
+                    span {
+                        @include span-style;
+                    }
+                    span:last-of-type {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .card-footer {
+                    @include card-number;
+                    button {
+                        padding: 8px 16px;
+                        background-color: rgb(77, 112, 255);
+                        border-radius: 24px;
+                        color: rgb(238, 238, 238);
+                        border: none;
+                    }
+
+                    span::after {
+                        content: "€";
+                    }
+                }
+            }
+        }
+    }
+}
