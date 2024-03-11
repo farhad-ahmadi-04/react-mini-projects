@@ -1,0 +1,26 @@
+[
+  {
+    "owner": "Frank Gonzales",
+    "cardNumber": 2793289138362895,
+    "movements": [250, 450, -420, 3100, -750, -130, 70, 1360],
+    "pin": 1111
+  },
+  {
+    "owner": "Paula Ball",
+    "cardNumber": 7510409137772723,
+    "movements": [5700, 3400, -1150, -790, -3210, -1000, 8500, -30],
+    "pin": 2222
+  },
+  {
+    "owner": "Carys Luna",
+    "cardNumber": 4518055487301823,
+    "movements": [200, -200, 340, -301, -220, 50, 4020, -460],
+    "pin": 3333
+  },
+  {
+    "owner": "Adelaide Bradshaw",
+    "cardNumber": 7793913338294251,
+    "movements": [430, 100, 700, 50, 90],
+    "pin": 4444
+  }
+]
