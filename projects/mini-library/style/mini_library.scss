@@ -73,5 +73,53 @@ body {
                 }
             }
         }
+
+        #UI {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            width: 90%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            border-radius: 16px;
+            transition: all 0.3s;
+
+            .haed {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border-bottom: 1px solid rgb(73, 73, 73);
+                padding: 8px;
+
+                .balance {
+                    font-size: 1.5rem;
+                }
+                .balance::after {
+                    content: "€";
+                }
+            }
+
+            .movement {
+                padding: 8px;
+
+                .move-item {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .account--deposit {
+                        padding: 8px 16px;
+                        background-color: rgb(0, 198, 0);
+                        color: rgb(232, 232, 232);
+                        border-radius: 24px;
+                    }
+                    .account--withdraw {
+                        padding: 8px 16px;
+                        background-color: rgb(196, 0, 0);
+                        color: rgb(232, 232, 232);
+                        border-radius: 24px;
+                    }
+                }
+            }
+        }
     }
 }

@@ -8,7 +8,7 @@ import cardGenerator from "../js/generateCard.js";
  * @param {string} balance - balance of account
  * @returns element
  */
-export default function cartItem(own, cardN, balance) {
+export default function cartItem(own, cardN, balance, pin) {
     // append to section by crad genrator function
     return cardGenerator(
         'div', { class: 'card' },
@@ -19,7 +19,7 @@ export default function cartItem(own, cardN, balance) {
             cardGenerator('span', { class: 'material-symbols-outlined' }, 'person'),
             cardGenerator('span', null, own)),
         cardGenerator('div', { class: 'card-footer' },
-            cardGenerator('button', null, 'movements'),
+            cardGenerator('button', { data_id: pin }, 'movements'),
             cardGenerator('span', null, balance)),
     )
 }
