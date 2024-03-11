@@ -1,26 +1,7 @@
 'use strict';
+import { cardItem } from "./generateCard.js";
 
 const sectionBankCard = cardItem('section', { id: "bank-card" })
-
-function cardItem(ele, att, ...childs) {
-    // create element
-    const element = document.createElement(ele);
-
-    if (att) {
-        Object.keys(att).forEach(key => element.setAttribute(key, att[key]));
-    }
-
-    if (childs) {
-        childs.forEach(child => {
-            if (typeof child === 'string') {
-                element.appendChild(document.createTextNode(child));
-            } else {
-                element.appendChild(child);
-            }
-        });
-    }
-    return element
-}
 
 sectionBankCard.appendChild(cardItem(
     'div', { class: 'card' },
