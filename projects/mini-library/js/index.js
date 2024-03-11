@@ -1,23 +1,47 @@
 'use strict';
-import { cardItem } from "./generateCard.js";
+import cardGenerator from "./generateCard.js";
+import cartItem from "./cardItem.js";
+import render from "./render.js";
 
-const sectionBankCard = cardItem('section', { id: "bank-card" })
+// varible
+const sectionBankCard = cardGenerator('section', { id: "bank-card" })
 
-sectionBankCard.appendChild(cardItem(
-    'div', { class: 'card' },
-    cardItem('div', { class: 'card-number' },
-        cardItem('span', { class: 'material-symbols-outlined' }, 'tag'),
-        cardItem('span', null, '6037 9974 8824 4691')),
-    cardItem('div', { class: 'card-name' },
-        cardItem('span', { class: 'material-symbols-outlined' }, 'person'),
-        cardItem('span', null, 'Farhad Ahmadi')),
-    cardItem('div', { class: 'card-footer' },
-        cardItem('button', null, 'movements'),
-        cardItem('span', null, '100,045')),
-))
+// event
+document.addEventListener('DOMContentLoaded', updateUI);
 
-function render(ele1, ele2) {
-    ele1.appendChild(ele2)
+// function
+
+/**
+ * 
+ * @returns user accounts from json file
+ */
+async function data() {
+    return await (await fetch('../../../projects/mini-library/js/accounts.json')).json();
 }
 
-render(document.querySelector('main'), sectionBankCard)
+/**
+ * pass user account for handeling
+ */
+function updateUI() {
+    data().then(data => showCard(data, sectionBankCard)).catch(error => console.log(error));
+}
+
+
+
+/**
+ * first with movement add balance of account and thet get render
+ * @param {Array} data array of object that have user account
+ */
+function showCard(data, pos) {
+    // loo for create balance with last movement
+    for (let item of data) {
+        item.balance = String(item.movements.reduce((acc, cur) => acc + cur, 0));
+    }
+    // loop for get data and destructure for append to sections
+    for (const { owner, cardNumber, balance } of data) {
+        pos.appendChild(cartItem(owner, cardNumber, balance))
+    }
+    // getting render
+    render(document.querySelector('main'), sectionBankCard)
+}
+

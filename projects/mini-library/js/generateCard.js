@@ -7,7 +7,7 @@
  * @param  {...any} childs - children of element
  * @returns element + attributes
  */
-export function cardItem(ele, att, ...childs) {
+export default function cardGenerator(ele, att, ...childs) {
     // create element
     const element = document.createElement(ele);
     // if element hs attributes so set attributes
