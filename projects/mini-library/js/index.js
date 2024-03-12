@@ -1,7 +1,7 @@
 'use strict';
-import cardGenerator from "./generateCard.js";
-import cartItem from "./cardItem.js";
-import render from "./render.js";
+import cardGenerator from "./modules/generateCard.js";
+import cartItem from "./modules/cardItem.js";
+import render from "./modules/render.js";
 
 // varible
 const sectionBankCard = cardGenerator('section', { id: 'bank-card' })
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', updateUI);
  * @returns user accounts from json file
  */
 async function data() {
-    return await (await fetch('../../../projects/mini-library/js/accounts.json')).json();
+    return await (await fetch('../../../projects/mini-library/js/modules/accounts.json')).json();
 }
 
 /**

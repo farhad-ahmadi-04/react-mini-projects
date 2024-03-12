@@ -1,5 +1,5 @@
 "use strict";
-import cardGenerator from "../js/generateCard.js";
+import cardGenerator from "./generateCard.js";
 
 /**
  * sent structure of elemet and retyrn it
