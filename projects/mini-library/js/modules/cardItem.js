@@ -1,5 +1,5 @@
 "use strict";
-import cardGenerator from "./generateCard.js";
+import projectGenerator from "../../../../js/module/projectGenerator.js";
 
 /**
  * sent structure of elemet and retyrn it
@@ -10,16 +10,16 @@ import cardGenerator from "./generateCard.js";
  */
 export default function cartItem(own, cardN, balance, pin) {
     // append to section by crad genrator function
-    return cardGenerator(
+    return projectGenerator(
         'div', { class: 'card' },
-        cardGenerator('div', { class: 'card-number' },
-            cardGenerator('span', { class: 'material-symbols-outlined' }, 'tag'),
-            cardGenerator('span', null, cardN)),
-        cardGenerator('div', { class: 'card-name' },
-            cardGenerator('span', { class: 'material-symbols-outlined' }, 'person'),
-            cardGenerator('span', null, own)),
-        cardGenerator('div', { class: 'card-footer' },
-            cardGenerator('button', { data_id: pin }, 'movements'),
-            cardGenerator('span', null, balance)),
+        projectGenerator('div', { class: 'card-number' },
+            projectGenerator('span', { class: 'material-symbols-outlined' }, 'tag'),
+            projectGenerator('span', null, cardN)),
+        projectGenerator('div', { class: 'card-name' },
+            projectGenerator('span', { class: 'material-symbols-outlined' }, 'person'),
+            projectGenerator('span', null, own)),
+        projectGenerator('div', { class: 'card-footer' },
+            projectGenerator('button', { data_id: pin }, 'movements'),
+            projectGenerator('span', null, balance)),
     )
 }
