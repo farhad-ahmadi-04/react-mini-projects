@@ -97,7 +97,7 @@ function accounts(data, target) {
             'div', { class: "movement" },
             cardGenerator('div', { class: 'move-item' },
                 cardGenerator('span', { class: String(`account--${state}`) }, state),
-                cardGenerator('span', { class: 'balance' }, String(`${item} :${index + 1}`))));
+                cardGenerator('span', { class: 'balance' }, String(`${item}€ :${index + 1}`))));
         sectionMove.appendChild(move);
 
     }

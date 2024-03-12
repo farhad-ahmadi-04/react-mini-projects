@@ -70,6 +70,7 @@ body main #bank-card .card .card-footer button {
   border-radius: 24px;
   color: rgb(238, 238, 238);
   border: none;
+  cursor: pointer;
 }
 body main #bank-card .card .card-footer span::after {
   content: "€";
@@ -77,18 +78,22 @@ body main #bank-card .card .card-footer span::after {
 body main #UI {
   display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 16px;
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   border-radius: 16px;
   transition: all 0.3s;
+  margin-top: 16px;
 }
 body main #UI .haed {
+  width: 60%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid rgb(73, 73, 73);
   padding: 8px;
+  font-size: 2rem;
 }
 body main #UI .haed .balance {
   font-size: 1.5rem;
@@ -98,11 +103,15 @@ body main #UI .haed .balance::after {
 }
 body main #UI .movement {
   padding: 8px;
+  width: 60%;
 }
 body main #UI .movement .move-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 8px;
+  background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(255, 255, 255) 20%, rgb(255, 255, 255) 80%, rgb(0, 0, 0) 100%) left bottom #fff no-repeat;
+  background-size: 100% 1px;
 }
 body main #UI .movement .move-item .account--deposit {
   padding: 8px 16px;
@@ -115,6 +124,9 @@ body main #UI .movement .move-item .account--withdraw {
   background-color: rgb(196, 0, 0);
   color: rgb(232, 232, 232);
   border-radius: 24px;
+}
+body main #UI .movement .move-item .balance {
+  font-size: 1.3rem;
 }
 
 /*# sourceMappingURL=mini_library.css.map */
