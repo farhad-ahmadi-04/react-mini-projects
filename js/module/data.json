@@ -1,9 +1,9 @@
 [
   {
-    "image": "../../images/image01.jfif",
+    "image": "./images/image01.jfif",
     "title": "Mini library",
     "text": "mini library for generating automatically",
-    "link": "../projects/mini-library/index.html"
+    "link": "./projects/mini-library/index.html"
   },
   {
     "image": "../../images/image02.jfif",
