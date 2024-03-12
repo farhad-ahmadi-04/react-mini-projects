@@ -1,2 +1,2 @@
 # react-mini-projects
-for my react practice
+- here you can see my mini react projects
