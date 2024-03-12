@@ -98,6 +98,7 @@ body {
                 .balance {
                     font-size: 1.5rem;
                 }
+
                 .balance::after {
                     content: "€";
                 }
