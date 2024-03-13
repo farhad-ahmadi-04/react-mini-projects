@@ -3,7 +3,7 @@
 ## here you can see my mini react projects
 
 > ![alt text](./images/Annotation%202024-03-13%20151107.png)
-> these cards are link of my projects😊
+> cards like these are link of my projects😊
 
 ### project01:
 
