@@ -91,7 +91,7 @@ function accounts(data, target) {
     // loop in movements
     for (const [index, item] of movements.entries()) {
         // if move of user account in greater than 0 so return deposit otherwise return witdraw
-        const state = item > 0 ? 'deposit' : 'withdraw'
+        const state = item > 0 ? 'deposit' : 'withdrawal'
         // geerate move part
         const move = projectGenerator(
             'div', { class: "movement" },
